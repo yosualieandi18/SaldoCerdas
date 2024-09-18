@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <children>
+      <ScrollPane layoutX="232.0" layoutY="-2.0" prefHeight="609.0" prefWidth="668.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="894.0" prefWidth="652.0">
+               <children>
+                  <TableView fx:id="pemasukanTable" layoutX="7.0" layoutY="117.0" prefHeight="263.0" prefWidth="638.0" style="-fx-border-color: #387F6E;">
+                    <columns>
+                      <TableColumn fx:id="kategoriPemasukan" prefWidth="164.0" text="Kategori" />
+                      <TableColumn fx:id="jumlahPemasukan" prefWidth="132.0" text="Jumlah" />
+                        <TableColumn fx:id="catatanPemasukan" prefWidth="170.0" text="Catatan" />
+                        <TableColumn fx:id="tanggalPemasukan" prefWidth="173.0" text="Tanggal" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="pengeluaranTable" layoutX="7.0" layoutY="519.0" prefHeight="238.0" prefWidth="638.0" style="-fx-border-color: #387F6E;">
+                     <columns>
+                        <TableColumn fx:id="kategoriPengeluaran" prefWidth="164.0" text="Kategori" />
+                        <TableColumn fx:id="jumlahPengeluaran" prefWidth="132.0" text="Jumlah" />
+                        <TableColumn fx:id="catatanPengeluaran" prefWidth="170.0" text="Catatan" />
+                        <TableColumn fx:id="tanggalPengeluaran" prefWidth="173.0" text="Tanggal" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="21.0" layoutY="14.0" prefHeight="42.0" prefWidth="206.0" text="Selamat Datang," textAlignment="CENTER" textFill="#387f6e">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="278.0" layoutY="64.0" text="Pemasukan" textFill="#387f6e">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="21.0" layoutY="396.0" mnemonicParsing="false" onAction="#pemasukanAction" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #387f6e;" text="Add Pemasukan" textAlignment="CENTER" textFill="#fffdc9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="deletePemasukan" layoutX="339.0" layoutY="396.0" mnemonicParsing="false" onAction="#deletePemasukanAction" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #387f6e;" text="Delete Pemasukan" textFill="#fffdc9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="278.0" layoutY="467.0" text="Pengeluaran" textFill="#f95e5e">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="21.0" layoutY="774.0" mnemonicParsing="false" onAction="#pengeluaranAction" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #387f6e;" text="Add Pengeluaran" textFill="#fffdc9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="pengeluaranAction" layoutX="339.0" layoutY="774.0" mnemonicParsing="false" onAction="#deletePengeluaranAction" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #387f6e;" text="Delete Pengeluaran" textFill="#fffdc9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="usernameLabel" layoutX="228.0" layoutY="17.0" prefHeight="38.0" prefWidth="341.0" text="Label" textFill="#387f6e">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <AnchorPane prefHeight="609.0" prefWidth="232.0" style="-fx-background-color: #387F6E;">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="68.0" layoutY="10.0">
+               <image>
+                  <Image url="@../../../../Downloads/Screenshot_2023-09-27_at_20.13%201.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="79.0" layoutY="27.0" prefHeight="35.0" prefWidth="150.0" style="-fx-text-fill: FFFDC9;" text="Saldo Cerdas" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutY="91.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: #fffdc9; -fx-border-width: 0.5px 0px 0.5px 0px;" text="Home" textFill="#fffdc9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="161.0" mnemonicParsing="false" onAction="#analisisAction" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: #fffdc9; -fx-border-width: 0.5px 0px 0.5px 0px;" text="Analisis" textFill="#fffdc9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="231.0" mnemonicParsing="false" onAction="#pemasukanAction" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: #fffdc9; -fx-border-width: 0.5px 0px 0.5px 0px;" text="Pemasukan" textFill="#fffdc9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="301.0" mnemonicParsing="false" onAction="#pengeluaranAction" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: #fffdc9; -fx-border-width: 0.5px 0px 0.5px 0px;" text="Pengeluaran" textFill="#fffdc9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="372.0" mnemonicParsing="false" onAction="#profileAction" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: #fffdc9; -fx-border-width: 0.5px 0px 0.5px 0px;" text="Profile" textFill="#fffdc9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="9.0" layoutY="111.0">
+               <image>
+                  <Image url="@../../../../Downloads/material-symbols_home.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="9.0" layoutY="251.0">
+               <image>
+                  <Image url="@../../../../Downloads/ic_twotone-open-in-browser.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="14.0" layoutY="191.0">
+               <image>
+                  <Image url="@../../../../Downloads/Vector.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="10.0" layoutY="321.0">
+               <image>
+                  <Image url="@../../../../Downloads/solar_cash-out-broken.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="392.0">
+               <image>
+                  <Image url="@../../../../Downloads/iconamoon_profile-circle-fill.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

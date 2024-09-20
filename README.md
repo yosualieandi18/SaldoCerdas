@@ -13,6 +13,7 @@ In this project I am responsible as a programmer role and the tasks I do are:
 Tools used:
 - 🧑‍💻 Eclipse IDE version 2020
 - 📚 jfxtras-labs-9.0 Library
+- 📑 JavaFX Library
 - 📊 XAMPP
 - ⚙️ JavaScript & CSS
 - 🖥️ SceneBuilder

@@ -11,6 +11,8 @@ In this project I am responsible as a programmer role and the tasks I do are:
 - Presenting SaldoCerdas and simulating the running of the application
 
 Tools used:
-- 🧑‍💻 Eclipse IDE version 2020 
+- 🧑‍💻 Eclipse IDE version 2020
+- 📚 jfxtras-labs-9.0 Library
 - 📊 XAMPP
+- ⚙️ JavaScript & CSS
 - 🖥️ SceneBuilder
